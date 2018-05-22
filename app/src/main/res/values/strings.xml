@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PlayFest</string>
+    <string name="head_text_1">Welcome to PlayFest!</string>
+    <string name="head_text_2">Select a festival, pick an artist and start listening random songs from that artist</string>
+</resources>
