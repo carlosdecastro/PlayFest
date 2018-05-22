@@ -27,11 +27,9 @@ public class ArtistActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
                 Artist currentArtist = (Artist) parent.getItemAtPosition(position);
 
-
-                Intent playIntent = new Intent(getBaseContext(), PlayActivity.class);
+                Intent playIntent = new Intent(ArtistActivity.this, PlayActivity.class);
                 playIntent.putExtra("artist", currentArtist);
                 startActivity(playIntent);
             }

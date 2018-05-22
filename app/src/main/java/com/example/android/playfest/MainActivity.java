@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Festival currentFestival = (Festival) parent.getItemAtPosition(position);
 
-                Intent festivalIntent = new Intent(getBaseContext(), ArtistActivity.class);
+                Intent festivalIntent = new Intent(MainActivity.this, ArtistActivity.class);
                 festivalIntent.putExtra("artists", currentFestival.getnArtists());
 
                 startActivity(festivalIntent);
