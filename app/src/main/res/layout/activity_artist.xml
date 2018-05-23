@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/artist_list_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:padding="@dimen/medium_padding"
     tools:context=".ArtistActivity">
 
+    <View
+        android:id="@+id/festivals_head"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/medium_padding"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/intro_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_padding"
+        android:text="@string/head_artist_text_1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_medium" />
+
+    <TextView
+        android:id="@+id/intro_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro_text"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="@string/head_artist_text_2"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <ListView
+        android:id="@+id/artist_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/medium_padding"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/festivals_head"
+        android:background="@color/white">
+
 </ListView>
+
+</RelativeLayout>

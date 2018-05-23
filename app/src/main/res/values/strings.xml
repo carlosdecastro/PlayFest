@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">PlayFest</string>
-    <string name="head_text_1">Welcome to PlayFest!</string>
-    <string name="head_text_2">Select a festival, pick an artist and start listening random songs from that artist</string>
+    <string name="head_text_1">MainActivity</string>
+    <string name="head_text_2">In this activity you can choose a festival to explorer what artists will play </string>
+    <string name="head_artist_text_1">ArtistActivitity</string>
+    <string name="head_artist_text_2">In this activity you can select an artist playing at the festival to listen some random songs</string>
+    <string name="head_play_text_1">PlayActivity</string>
+    <string name="head_play_text_2">In this activity you can view some information about the song and control playback</string>
 </resources>
