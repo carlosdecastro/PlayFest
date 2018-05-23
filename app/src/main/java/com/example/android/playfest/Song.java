@@ -2,7 +2,7 @@ package com.example.android.playfest;
 
 import java.io.Serializable;
 
-/** This class define a song whith his methods and attributes **/
+/** This class define a song with his methods and attributes **/
 
 public class Song implements Serializable{
 

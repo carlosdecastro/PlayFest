@@ -13,7 +13,6 @@ public class Artist implements Serializable{
     private Song[] mSongs;
     private int mImageResourceId;
 
-
     public Artist (String name, Song[] songs, int imageResourceId) {
 
         mName = name;

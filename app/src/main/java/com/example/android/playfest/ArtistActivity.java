@@ -11,12 +11,14 @@ import java.util.Arrays;
 
 public class ArtistActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artist);
 
-        Artist[] artists = (Artist[])getIntent().getExtras().getSerializable("artists");
+        // get the list of artists in the current Festival
+        Artist[] artists = Festival.getCurrentFestival().getnArtists();
 
         ArtistAdapter adapter = new ArtistAdapter(this, new ArrayList<>(Arrays.asList(artists)));
         ListView listView = findViewById(R.id.artist_list_view);
@@ -35,5 +37,4 @@ public class ArtistActivity extends AppCompatActivity {
             }
         });
     }
-
 }

@@ -29,7 +29,5 @@ public class PlayActivity extends AppCompatActivity {
         TextView songTitleTextView = findViewById(R.id.song_title_text_view);
 
         songTitleTextView.setText(songs[(int)randomSong].getName());
-
-
     }
 }

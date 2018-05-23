@@ -16,7 +16,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FestivalAdapter adapter = new FestivalAdapter(this, initData());
+        //This condition is to avoid the reload of data every time we came back to this activity
+        if (Festivals.getFestivals() == null)
+            Festivals.setFestivals(initData());
+
+        FestivalAdapter adapter = new FestivalAdapter(this, Festivals.getFestivals());
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(adapter);
 
@@ -24,11 +28,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Festival currentFestival = (Festival) parent.getItemAtPosition(position);
+                Festival.setCurrentFestival((Festival) parent.getItemAtPosition(position));
 
                 Intent festivalIntent = new Intent(MainActivity.this, ArtistActivity.class);
-                festivalIntent.putExtra("artists", currentFestival.getnArtists());
-
                 startActivity(festivalIntent);
             }
         });
